@@ -1,0 +1,23 @@
+<div class="container" style="margin-top: 10px;background-color: burlywood;">
+  <div class="row" style="justify-content: space-between;">
+      <div *ngFor="let art of arts" class="card col-3 " >
+        <img src="{{ art.image }}" class="card-img-top" alt="Mona Lisa" width="500" height="600" />
+        <div class="card-body">
+          <h5 class="card-title">{{ art.name }}</h5>
+          <p class="card-text">{{ art.description }}</p>
+          <div class="row">
+            <input
+              type="text"
+              class="form-control"
+              #inp
+              id="FormControlInput1"
+              placeholder="Add comment"
+            />
+            <button onclick="addComment(inp.value)" class="btn btn-primary">
+              Add comments
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
